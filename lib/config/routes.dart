@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rick_and_morty_api/screens/characters_screen.dart';
 import 'package:rick_and_morty_api/screens/home_screen.dart';

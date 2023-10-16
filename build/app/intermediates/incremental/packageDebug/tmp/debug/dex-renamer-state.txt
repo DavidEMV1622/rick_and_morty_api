@@ -1,0 +1,4 @@
+#Mon Oct 16 11:25:32 COT 2023
+base.0=C\:\\Users\\david\\OneDrive\\Documentos\\Repositorios-Git\\Git-Hub\\rick_and_morty_api\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

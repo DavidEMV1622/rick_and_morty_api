@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rick_and_morty_api/providers/api_provider.dart';
-import 'package:rick_and_morty_api/screens/home_screen.dart';
 
 import 'config/routes.dart';
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:rick_and_morty_api/providers/api_provider.dart';
+import 'package:rick_and_morty_api/widgets/search_delegate.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -48,6 +49,13 @@ class _HomeScreenState extends State<HomeScreen> {
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
+
+        // Boton de "Lupa" para buscar personaje
+        actions: [
+          IconButton(onPressed: () {
+            showSearch(context: context, delegate: SearchCharacter());
+          }, icon: const Icon(Icons.search))
+        ],
       ),
 
       body: SizedBox(
@@ -80,7 +88,7 @@ class CharacterList extends StatelessWidget {
     return GridView.builder(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        childAspectRatio: 0.91, // Espacio que abarca cada Card
+        childAspectRatio: 0.89, // Espacio que abarca cada Card
         crossAxisSpacing: 15, // Separacion lateral entre cada Card
         mainAxisSpacing: 15, // Separacion superior e inferior entre cada Card
       ),
@@ -97,9 +105,13 @@ class CharacterList extends StatelessWidget {
             child: Card(
               child: Column(children: [
 
-                FadeInImage(
-                  placeholder: const AssetImage("assets/images/portal_charge.gif"), 
-                  image: NetworkImage(character.image!)
+                // "Hero" animación de desplazamiento al seleccionar un personaje
+                Hero(
+                  tag: character.id!, // Se agrega el valor que define a cada personaje
+                  child: FadeInImage(
+                    placeholder: const AssetImage("assets/images/portal_charge.gif"), 
+                    image: NetworkImage(character.image!)
+                  ),
                 ),
 
                 Text(character.name!, 
