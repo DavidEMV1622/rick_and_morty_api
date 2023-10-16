@@ -34,6 +34,7 @@ class SearchCharacter extends SearchDelegate {
     return Container();
   }
 
+  // Metodo para mostrar la lista de personajes a la hora buscarlo
   @override
   Widget buildSuggestions(BuildContext context) {
     final characterProvider = Provider.of<ApiProvider>(context);
