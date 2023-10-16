@@ -1,4 +1,4 @@
-#Fri Oct 13 14:56:39 COT 2023
-base.0=/home/david/Documentos/practicas de proyecto flutter/rick_and_morty_api/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+#Mon Oct 16 12:33:47 COT 2023
+base.0=C\:\\Users\\david\\OneDrive\\Documentos\\Repositorios-Git\\Git-Hub\\rick_and_morty_api\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
