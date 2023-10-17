@@ -100,7 +100,7 @@ class CharacterList extends StatelessWidget {
           final character = apiProvider.characters[index];
           return GestureDetector(
             onTap: () {
-              context.go('/character', extra: character);
+              context.push('/character', extra: character);
             },
             child: Card(
               child: Column(children: [

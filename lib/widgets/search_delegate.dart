@@ -66,7 +66,7 @@ class SearchCharacter extends SearchDelegate {
 
             return ListTile(
               onTap: () {
-                context.go("/character", extra: character);
+                context.push("/character", extra: character);
               },
               title: Text(character.name!),
               leading: Hero(
