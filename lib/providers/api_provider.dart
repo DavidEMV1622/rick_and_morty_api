@@ -31,6 +31,9 @@ class ApiProvider with ChangeNotifier{
   Future<List<Character>> getSearchCharacter(String name) async {
     final result = await http.get(Uri.https(url, "/api/character/", {"name": name}));
     final response = characterModelFromJson(result.body);
+    print(response.results);
     return response.results!;
+
+
   }
 }

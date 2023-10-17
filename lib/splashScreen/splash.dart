@@ -9,9 +9,9 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     var timeSplash = Duration(seconds: 3);
     Future.delayed(timeSplash, () {
@@ -22,6 +22,37 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(children: [
+
+        /* TweenAnimationBuilder<double>(
+          tween: Tween(begin: 1.0, end: 0.0,),
+          duration: const Duration(seconds: 2),
+          curve: Curves.bounceInOut,
+          builder: (context, value, child) {
+
+            return Opacity(
+              opacity: value,
+              child: Transform.scale(
+                scale: value * (MediaQuery.of(context).size.height * 0.03),
+                child: child,
+              ),
+            );
+          },
+          child: Stack(
+            children: [
+              Align(
+                alignment: Alignment.center,
+                child: Container(
+                  width: 45,
+                  height: 45,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.blue,
+                  )
+                ),
+              ),
+            ],
+          ),
+        ), */
 
         TweenAnimationBuilder<double>(
           tween: Tween(begin: 0.0, end: 1.0,),
